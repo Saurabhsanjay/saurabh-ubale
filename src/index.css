@@ -32,6 +32,7 @@ textarea {
 ::selection {
   @apply bg-cyan-600;
 }
+
 ::-webkit-scrollbar{
   width:0.7rem
 }
