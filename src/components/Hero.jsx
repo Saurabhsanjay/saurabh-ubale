@@ -1,13 +1,20 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from "react-simple-typewriter";
+
 const Hero = () => {
   const social_media = [
-    "logo-linkedin",
-    "logo-google",
-    // / "logo-facebook",
-    "git-branch",
+    {
+      icon: "logo-linkedin",
+      link: "https://www.linkedin.com/in/saurabh-ubale-035a18234/",
+    },
+    {
+      icon: "logo-google",
+      link: "mailto:/saurabhubale371@gmail.com",
+    },
+    { icon: "git-branch", link: "https://github.com/saurabhSanjay" },
   ];
+
   return (
     <section
       id="home"
@@ -35,26 +42,23 @@ const Hero = () => {
                 typeSpeed={90}
                 deleteSpeed={70}
                 delaySpeed={2000}
-                // onLoopDone={handleDone}
-                // onType={handleType}
               />
             </span>
           </h1>
-          {/* <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Fullstack Developer
-          </h4> */}
-          <button className="bg-rose-500 hover:bg-rose-700  py-3 px-4 rounded-full mt-8">
-            {" "}
+          <button className="bg-rose-500 hover:bg-rose-700 py-3 px-4 rounded-full mt-8">
             <a href="#contact">Contact Me</a>
           </button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon) => (
-              <div
-                key={icon}
-                className="text-gray-600 hover:text-white cursor-pointer "
+            {social_media.map((social) => (
+              <a
+                key={social.icon}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-white cursor-pointer"
               >
-                <ion-icon name={icon}></ion-icon>
-              </div>
+                <ion-icon name={social.icon}></ion-icon>
+              </a>
             ))}
           </div>
         </div>
