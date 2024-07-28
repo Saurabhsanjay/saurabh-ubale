@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/project-1.png";
+import project1 from "../assets/images/bewakoof-front.png";
 import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/porject-3.png";
 import project4 from "../assets/images/project-4.jpg";
@@ -16,19 +16,19 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Boat Lifestyle Clone ",
-      github_link: "https://github.com/Saurabhsanjay/BoAt-Clone",
-      live_link: "https://boat-app-mu.vercel.app/",
+      name: "Bewakoof.com ",
+      github_link: "https://github.com/Saurabhsanjay/Bewakoof.com",
+      live_link: "https://subtle-strudel-c8db2e.netlify.app/",
     },
     {
       img: project2,
-      name: "My-Glamm Clone",
+      name: "My-Glamm",
       github_link: "https://github.com/Saurabhsanjay/fearless-humor-9094",
       live_link: "https://myglammclone.vercel.app/",
     },
     {
       img: project3,
-      name: "1Mg Clone",
+      name: "1Mg",
       github_link: "https://github.com/mohitbirla20/team_1mg",
       live_link: "https://fabulous-sorbet-67ec69.netlify.app/",
     },
@@ -41,16 +41,16 @@ const Project = () => {
     // },
     {
       img: project5,
-      name: "HelloBrightLine Clone",
+      name: "HelloBrightLine",
       github_link: "https://github.com/sadhakvishu/material-road-6006",
       live_link: "https://vuecountry05.netlify.app",
     },
   ];
-  useEffect(()=>{
-    Aos.init({duration: 2000})
-  },[])
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <section data-aos="zoom-in"  id="projects" className="py-10 text-white">
+    <section data-aos="zoom-in" id="projects" className="py-10 text-white">
       <div className="text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-rose-600">Projects</span>
@@ -80,7 +80,11 @@ const Project = () => {
             {projects.map((project_info, i) => (
               <SwiperSlide key={i}>
                 <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={project_info.img} alt="" className="rounded-lg" />
+                  <img
+                    src={project_info.img}
+                    alt=""
+                    className="rounded-lg"
+                  />
                   <h3 className="text-xl my-4">{project_info.name}</h3>
                   <div className="flex gap-3">
                     <a

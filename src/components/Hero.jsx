@@ -14,7 +14,7 @@ const Hero = () => {
       className="min-h-screen flex py-10 md:flex-row flex-col items-center"
     >
       <div className="flex-1 flex items-center justify-center h-full">
-        <img src={hero} alt="" style={{width:"400px"}} />
+        <img src={hero} alt="" style={{ width: "400px" }} />
       </div>
       <div className="flex-1">
         <div className="md:text-left text-center">
@@ -25,24 +25,28 @@ const Hero = () => {
             </span>
             My Name is <span>Saurabh Ubale</span> <br />
             <span>I'm a</span>
-            <span style={{ color: '#e11d48',}}>
-            <Typewriter cursorColor="#e11d48"
-            words={[' Full Stack Developer .']}
-            loop={5000000}
-            cursor
-            cursorStyle='|'
-            typeSpeed={90}
-            deleteSpeed={70}
-            delaySpeed={2000}
-            // onLoopDone={handleDone}
-            // onType={handleType}
-          />
-          </span>
+            <span style={{ color: "#e11d48" }}>
+              <Typewriter
+                cursorColor="#e11d48"
+                words={[" Full Stack Developer ."]}
+                loop={5000000}
+                cursor
+                cursorStyle="|"
+                typeSpeed={90}
+                deleteSpeed={70}
+                delaySpeed={2000}
+                // onLoopDone={handleDone}
+                // onType={handleType}
+              />
+            </span>
           </h1>
           {/* <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
             Fullstack Developer
           </h4> */}
-          <button className="bg-rose-500 hover:bg-rose-700  py-3 px-4 rounded-full mt-8">Contact Me</button>
+          <button className="bg-rose-500 hover:bg-rose-700  py-3 px-4 rounded-full mt-8">
+            {" "}
+            <a href="#contact">Contact Me</a>
+          </button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((icon) => (
               <div
